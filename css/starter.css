@@ -30,3 +30,8 @@ tr.High td {
 tr.Critical td {
   background-color: #ff6666;
 }
+
+div#controls {
+  display: none;
+  /*visibility: hidden;*/
+}

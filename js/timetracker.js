@@ -1,14 +1,14 @@
 
 $.when( $.ready ).then(function() {
 
+  var dropbox;
+
+  dropbox = document.getElementById("dropbox");
+  dropbox.addEventListener("dragenter", dragenter, false);
+  dropbox.addEventListener("dragover", dragover, false);
+  dropbox.addEventListener("drop", drop, false);
+
 });
-
-var dropbox;
-
-dropbox = document.getElementById("dropbox");
-dropbox.addEventListener("dragenter", dragenter, false);
-dropbox.addEventListener("dragover", dragover, false);
-dropbox.addEventListener("drop", drop, false);
 
 function drop(e) {
   e.stopPropagation();
@@ -22,7 +22,10 @@ function drop(e) {
     function(csvData) {
 
       $("#scheduleform").fadeOut(500, function() {
-        $("#times").fadeIn(500);
+
+        $("#times").fadeIn(500, function() {
+          $("#controls").fadeIn(500);
+        });
       });
 
       var lines = csvData.split('\n');
@@ -81,8 +84,4 @@ function handleFiles(files, successCallback, failCallBack) {
     reader.readAsText(file);
 
   }
-}
-
-function displayError(errorString) {
-
 }
