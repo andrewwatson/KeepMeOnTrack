@@ -27,7 +27,9 @@ function drop(e) {
 
       var lines = csvData.split('\n');
 
-      for(var line = 0; line < lines.length; line++){
+      $("#pagetitle").text(lines[0]);
+      for(var line = 1; line < lines.length; line++){
+
         if (lines[line] !== "") {
           var columns = lines[line].split(",");
 
