@@ -38,8 +38,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <!-- <li class="active"><a href="#">Home</a></li> -->
-            <li><a href="about.html">About</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="about.html">About</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -52,32 +52,30 @@
         <p class="lead">&lt;script&gt; alert('this is awesome!');&lt;/script&gt;</p>
       </div>
 
-      <div id="alert" class="alert alert-danger" role="alert">
-        &nbsp;
-      </div>
+      <div class=" col-lg-8 col-lg-offset-2">
+        <div class="panel panel-primary">
+          <div class="panel-heading">What is this?</div>
+          <div class="panel-body">
+            <p>This is meant to be an easy way to keep a talk or a lesson on track so you don't run out of time!</p>
+            <p>Just drag a CSV file into the bucket!  It should be formatted like this:</p>
+            <pre>
+              Bootcamp 3.1 - The Joy of Javascript
+              6:30 PM,,Instructor Do: Welcome Students ,0:01
+              6:31 PM,,Instructor Do: Today's Class,0:01
+              6:32 PM,,Instructor Do: How to Learn Javascript,0:05
+              6:37 PM,,Partners Do: Code Dissection,0:07
+              6:44 PM,,Instructor Do: What is Javascript,0:02
+              6:46 PM,,Instructor Do: Variables + Demo,0:06
+              6:52 PM,High,Students Do: Variable Activity,0:10
+              7:02 PM,,Instructor Do: Review Variable Activity,0:04
+            </pre>
+            <p>The first line will be used as the title of the page</p>
+            <p>The second column is used to indicate if any items are more important.  Recognized values are "High" and "Critical"</p>
 
-      <table class="table table-striped" id="times">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Criticality</th>
-            <th>Task</th>
-            <th>Duration</th>
-          </tr>
-          <tbody id="tableBody">
-
-          </tbody>
-        </thead>
-      </table>
-
-      <form class="form" action="#" id="scheduleform">
-
-        <div id="dropbox" class="col-lg-2 col-lg-offset-5 col-xs-12" id="csvpanel">
-              <img src="images/bucket.png" alt="drop csv here">
+            <p>Ok, <a href="index.html">let's go</a>!</p>
+          </div>
         </div>
-
-      </form>
-
+      </div>
     </div><!-- /.container -->
 
     <!-- Bootstrap core JavaScript
