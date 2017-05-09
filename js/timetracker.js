@@ -1,4 +1,7 @@
 
+var running = false;
+
+
 $.when( $.ready ).then(function() {
 
   var dropbox;
@@ -8,7 +11,35 @@ $.when( $.ready ).then(function() {
   dropbox.addEventListener("dragover", dragover, false);
   dropbox.addEventListener("drop", drop, false);
 
+  $("#startButton").on('click', handleStartButton);
+  $("#stopButton").attr('disabled', true);
+
+  $("#stopButton").on('click', handleStopButton);
+  $("#stepButton").on('click', rollUp);
+
 });
+
+function handleStopButton() {
+  $(this).attr('disabled', true);
+  $("#startButton").attr('disabled', false);
+  running = false;
+}
+
+function handleStartButton() {
+
+  $(this).attr('disabled', true);
+  $("#stopButton").attr('disabled', false);
+
+  var nextRow = $("#tableBody tr:first-child");
+  var lastCell = $("#tableBody tr:first-child td:last-child");
+
+  running = true;
+  console.log(lastCell.text());
+}
+
+function rollUp() {
+  $("#tableBody tr:first-child").remove();
+}
 
 function drop(e) {
   e.stopPropagation();
