@@ -1,0 +1,27 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+#times {
+  display: none;
+}
+
+div#alert {
+  display: none;
+}
+
+tr#templaterow {
+  display: none;
+}
+
+tr.High td {
+  background-color: #ffaaaa;
+}
+
+tr.Critical td {
+  background-color: #ff6666;
+}
